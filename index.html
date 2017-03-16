@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<script>
+$(document).on("pagecreate","#page2",function(){
+  $("p").on("tap",function(){
+    $(this).hide();
+  });                       
+});
+</script>
+<script>
+$(document).on("pagecreate","#pageone",function(){
+  $("p").on("taphold",function(){
+    $(this).hide();
+  });                       
+});
+</script>
+<script>
+$(document).on("pagecreate","#page4",function(){
+  $("p").on("swipe",function(){
+    $("span").text("detectado!");
+  });                       
+});
+</script>
+<script>
+$(document).on("pagecreate","#page5",function(){
+  $("p").on("swipeleft",function(){
+    alert("Hola pro!");
+  });                       
+});
+</script>
+<script>
+$(document).on("pagecreate","#page6",function(){
+  $("p").on("swiperight",function(){
+    alert("que tal!");
+  });                       
+});
+</script>
+</head>
+<body>
+
+<div data-role="page" id="page">
+	<div data-role="header">
+		<h1>Página uno</h1>
+	</div>
+	<div data-role="content">	
+		<ul data-role="listview">
+			<li><a href="#page2">Página dos</a></li>
+            <li><a href="#pageone">Página tres</a></li>
+			<li><a href="#page4">Página cuatro</a></li>
+            <li><a href="#page5">Página cinco</a></li>
+            <li><a href="#page6">Página seis</a></li>
+		</ul>		
+	</div>
+	<div data-role="footer">
+		<h4>Pie de página</h4>
+	</div>
+</div>
+
+<div data-role="page" id="page2">
+  <div data-role="header">
+    <h1>Prueba</h1>
+  </div>
+
+  <div data-role="main" class="ui-content">
+    <p>tocame *-*</p>
+    <p>alto!!!</p>
+    <p>estetica</p>
+  </div>
+
+  <div data-role="footer">
+    <h1>1</h1>
+  </div>
+</div> 
+
+
+<div data-role="page" id="pageone">
+  <div data-role="header">
+    <h1>Prueba 2</h1>
+  </div>
+
+  <div data-role="main" class="ui-content">
+    <p>Presiona</p>
+    <p>Presiona nada</p>
+    <p>manten presionado</p>
+  </div>
+
+  <div data-role="footer">
+    <h1>dos 2</h1>
+  </div>
+</div> 
+
+<div data-role="page" id="page4">
+  <div data-role="header">
+    <h1>ejemplo</h1>
+  </div>
+
+  <div data-role="main" class="ui-content">
+    <p>pasa tu dedo</p>
+    <p style="border:1px solid black;height:200px;width:200px;"></p>
+    <p><span style="color:red"></span></p>
+  </div>
+
+  <div data-role="footer">
+    <h1>Footer Text</h1>
+  </div>
+</div> 
+
+<div data-role="page" id="page5">
+  <div data-role="header">
+    <h1>emeplo 4</h1>
+  </div>
+
+  <div data-role="main" class="ui-content">
+    <p style="border:1px solid black;margin:5px;">hola mundo!</p>
+  </div>
+
+  <div data-role="footer">
+    <h1>4</h1>
+  </div>
+</div> 
+
+<div data-role="page" id="page6">
+  <div data-role="header">
+    <h1>ejemplo 5</h1>
+  </div>
+
+  <div data-role="main" class="ui-content">
+    <p style="border:1px solid black;margin:5px;">hola a todos!</p>  
+  </div>
+
+  <div data-role="footer">
+    <h1>5</h1>
+  </div>
+</div> 
+
+
+</body>
+</html>
